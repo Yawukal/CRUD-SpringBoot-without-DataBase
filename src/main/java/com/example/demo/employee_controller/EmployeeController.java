@@ -28,6 +28,7 @@ public String home() {
             if (!employeeModels.isEmpty()) {
                 AppResponse response = new AppResponse(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase(), employeeModels);
                 return new ResponseEntity<>(response, HttpStatus.OK);
+                System.out.println("Request Values will print here ===== " + employeeModels);
         
             } else {
                 throw new Exception();
