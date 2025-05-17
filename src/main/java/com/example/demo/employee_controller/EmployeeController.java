@@ -22,7 +22,6 @@ public String home() {
 }
     @GetMapping("/employees")
     public ResponseEntity<Object> getEmployees() {
-         System.out.println("APP_MODE: " + System.getenv("APP_MODE"));
         try {
             System.out.println("LOG TEST: /employees endpoint hit==========================================>>>>>>>>>>>>>>");
             List<EmployeeModel> employeeModels = iEmployeeService.getEmployees();
