@@ -23,10 +23,12 @@ public String home() {
     @GetMapping("/employees")
     public ResponseEntity<Object> getEmployees() {
         try {
+            System.out.println("LOG TEST: /employees endpoint hit==========================================>>>>>>>>>>>>>>");
             List<EmployeeModel> employeeModels = iEmployeeService.getEmployees();
             if (!employeeModels.isEmpty()) {
                 AppResponse response = new AppResponse(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase(), employeeModels);
                 return new ResponseEntity<>(response, HttpStatus.OK);
+        
             } else {
                 throw new Exception();
             }
