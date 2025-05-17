@@ -15,7 +15,11 @@ public class EmployeeController {
 
     @Autowired
     IEmployeeService iEmployeeService;
-
+    
+  @GetMapping("/")
+public String home() {
+    return "Welcome to the Employee API!";
+}
     @GetMapping("/employees")
     public ResponseEntity<Object> getEmployees() {
         try {
