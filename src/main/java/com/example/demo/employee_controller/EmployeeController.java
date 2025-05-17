@@ -26,9 +26,9 @@ public String home() {
             System.out.println("LOG TEST: /employees endpoint hit==========================================>>>>>>>>>>>>>>");
             List<EmployeeModel> employeeModels = iEmployeeService.getEmployees();
             if (!employeeModels.isEmpty()) {
+                System.out.println("Request Values will print here ===== " + employeeModels);
                 AppResponse response = new AppResponse(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase(), employeeModels);
                 return new ResponseEntity<>(response, HttpStatus.OK);
-                System.out.println("Request Values will print here ===== " + employeeModels);
         
             } else {
                 throw new Exception();
