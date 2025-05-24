@@ -1,8 +1,9 @@
 package com.example.demo.employee_controller;
 
-import com.example.demo.exception_handling.AppResponse;
 import com.example.demo.employee_model.EmployeeModel;
 import com.example.demo.employee_service.IEmployeeService;
+import com.example.demo.exception_handling.AppResponse;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +14,10 @@ import java.util.List;
 @RestController
 public class EmployeeController {
 
-    @Autowired
+    public EmployeeController(IEmployeeService iEmployeeService) {
+        this.iEmployeeService = iEmployeeService;
+    }
+
     IEmployeeService iEmployeeService;
     
   @GetMapping("/")

@@ -1,20 +1,14 @@
 package com.example.demo.rest_client_Service;
 
-import com.example.demo.exception_handling.AppResponse;
 import com.example.demo.employee_model.EmployeeModel;
+import com.example.demo.exception_handling.AppResponse;
 import com.example.demo.rest_client_controller.ClassAPI;
-import com.mashape.unirest.http.HttpResponse;
-import com.mashape.unirest.http.JsonNode;
-import com.mashape.unirest.http.Unirest;
-import com.mashape.unirest.http.exceptions.UnirestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 @Service
 public class ClientService implements IClientService {
